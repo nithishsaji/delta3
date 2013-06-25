@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="foundation.css" />
+</head>
+
+<body>
+	<p id="fgh">
+The *marked  inputs  cannot be left blank by the user</br>
+The first character entered in the Name input must be in uppercase</br>
+The password must consist only of digits, alphabets and underscores.</br>
+The size of the password must be atleast 5 characters but less than 10 characters.</br>
+Validate the email id entered using Regular Expressions(Regex)</br>
+Atleast three of the clubs Checkbox must be checked.</br>
+Date of Birth Must Be a Valid Date.</br>
+Roll Number must have 10 digits.</br>
+Email Id must be valid.</br>
+Uploaded file must be of type jpg or png and  less than 1 MB in size.</br>
+</p>
+
+<form name="myForm" encytype="multipart/form-data" class="small-offset-2 large-8 columns" action="server.php" method="POST" onSubmit="return validateForm()">
+
+<fieldset>
+<legend>Task3</legend>
+<div class="row">
+<div class="large-4 columns">
+<span class="label">*Name</span>: <input type="text" id="right-label"  name="name">
+<div class="large-8 columns" id="fname" style="DISPLAY: none" >
+<div data-alert class="alert-box alert round ">
+  Invalid Entry
+  
+</div>
+</div>
+</br>
+</div>
+</div>
+
+
+<div class="row">
+<div class="large-4 columns">
+ <span class="label">*DOB</span>: <input type="text" id="right-label" placeholder="mm-dd-yyyy" name="dob">
+<div class="large-8 columns" id="fdob" style="DISPLAY: none" >
+<div data-alert class="alert-box alert round ">
+  Invalid Entry
+  
+</div>
+</div>
+</div>
+</div>
+</br>
+
+
+<div class="row">
+<div class="large-4 columns">
+ <span class="label">GENDER:</span>   <br><br>
+<input id="gender" name="gender" type="radio" class="radio-btn" value="Male" />Male
+<input id="gender" name="gender" type="radio" class="radio-btn" value="Female" />Female</br><br>
+</div>
+</div>
+
+
+<div class="row">
+<div class="large-4 columns">
+ <span class="label">Roll No:</span>
+ <input type="text" name="frn"></br>
+<div class="large-8 columns" id="frn" style="DISPLAY: none" >
+<div data-alert class="alert-box alert round ">
+  ROLL NO INVALID
+  
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="large-4 columns">
+	<span class="label">Dept:</span>
+ <input type="text" name="dept"></br>
+</div>
+</div>
+
+<div class="row">
+<div class="large-4 columns">
+	<span class="label">*email:</span>
+	 <input type="text" name="email" id="email"></br>
+	<div class="large-8 columns" id="femail" style="DISPLAY: none" >
+<div data-alert class="alert-box alert round ">
+  Invalid Entry
+  
+</div>
+</div>
+	</div>
+</div></br>
+
+<div class="row">
+<div class="large-4 columns">
+ <span class="label">*Interested Clubs:</span><br><br>
+<input type="checkbox" name="delta" >Delta</br>
+<input type="checkbox" name="spider" >Spider</br> 
+<input type="checkbox" name="rmi" >RMI</br>
+<input type="checkbox" name="design" >Design team </br>
+<div class="large-8 columns" id="fclub" style="DISPLAY: none" >
+<div data-alert class="alert-box alert round ">
+  Invalid Entry
+  
+</div>
+</div>
+</br>
+</div>
+</div>
+
+
+<div class="row">
+<div class="large-4 columns">
+Residential Address: <input type="text" class="large-12 columns" name="ra"></br>
+</div>
+</div>
+
+<div class="row">
+<div class="large-4 columns">
+
+<span class="label">*Last School Attended :</span>
+ <select name="school">
+  <option value="abc">School1</option>
+  <option value="pqr">School2</option>
+  <option value="xyz">School3</option>
+  <option value="xyz">School5</option>
+  <option value="xyz">School6</option>
+<option value="other">Other</option>
+</select></br>
+<div class="large-8 columns" id="fschool" style="DISPLAY: none" >
+<div data-alert class="alert-box alert round ">
+  Invalid Entry
+  
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="large-4 columns">
+	
+ <span class="label">*Password:</span>
+<input type="password" name="pass"></br>
+<div class="large-8 columns" id="fpass" style="DISPLAY: none" >
+<div data-alert class="alert-box alert round ">
+  Invalid Entry
+  
+</div>
+</div>
+</br>
+</br>
+
+<span class="label">*Confirm Password</span>
+<input type="password" name="cpass"></br>
+<div class="large-8 columns" id="fcpass" style="DISPLAY: none" >
+<div data-alert class="alert-box alert round ">
+  Invalid Entry
+  
+</div>
+</div>
+
+<!-- <input type="hidden" name="MAX_FILE_SIZE" value="1048576"> -->
+<!-- Upload Image: <input type="file" name="image" id="image"accept="image/*"> -->
+<table width="350" border="0" cellpadding="1" cellspacing="1" class="box">  
+<tr> 
+<td width="246">
+<input type="hidden" name="MAX_FILE_SIZE" value="1048576">
+<input name="image" type="file" id="image"> 
+</td>
+<td width="80"><input name="upload" type="hidden" class="box" id="upload" value=" Upload "></td>
+</tr>
+</table>
+<div class="large-8 columns" id="im" style="DISPLAY: none" >
+<div data-alert class="alert-box alert round ">
+  Invalid Entry
+  
+</div>
+</div>
+
+<input type="submit" class="button" value="Submit">
+<input type="hidden" name="submitted" value="1"> 
+
+</div
+</div>
+</fieldset>
+</form>
+</body>
+
+</html>	
