@@ -20,7 +20,7 @@ Email Id must be valid.</br>
 Uploaded file must be of type jpg or png and  less than 1 MB in size.</br>
 </p>
 
-<form name="myForm" encytype="multipart/form-data" class="small-offset-2 large-8 columns" action="server.php" method="POST" onSubmit="return validateForm()">
+<form name="myForm" enctype="multipart/form-data" class="small-offset-2 large-8 columns" action="server.php" method="POST" onSubmit="return validateForm()">
 
 <fieldset>
 <legend>Task3</legend>
@@ -164,12 +164,12 @@ Residential Address: <input type="text" class="large-12 columns" name="ra"></br>
 </div>
 
 <!-- <input type="hidden" name="MAX_FILE_SIZE" value="1048576"> -->
-<!-- Upload Image: <input type="file" name="image" id="image"accept="image/*"> -->
+<!-- Upload file: <input type="file" name="file" id="file"accept="file/*"> -->
 <table width="350" border="0" cellpadding="1" cellspacing="1" class="box">  
 <tr> 
 <td width="246">
 <input type="hidden" name="MAX_FILE_SIZE" value="1048576">
-<input name="image" type="file" id="image"> 
+<input name="file" type="file" id="file"> 
 </td>
 <td width="80"><input name="upload" type="hidden" class="box" id="upload" value=" Upload "></td>
 </tr>
@@ -184,8 +184,7 @@ Residential Address: <input type="text" class="large-12 columns" name="ra"></br>
 <input type="submit" class="button" value="Submit">
 <input type="hidden" name="submitted" value="1"> 
 
-</div
-</div>
+
 </fieldset>
 </form>
 </body>

@@ -168,13 +168,12 @@ $tmpName  =NULL;
 $fileSize =NULL;
 $fileType =NULL;
 $content=NULL;
-
-if(isset($_POST['upload']) && $_FILES['image']['size'] > 0)
+if(isset($_POST['upload']) && $_FILES['file']['size'] > 0)
 {
-$fileName = $_FILES['image']['name'];
-$tmpName  = $_FILES['image']['tmp_name'];
-$fileSize = $_FILES['image']['size'];
-$fileType = $_FILES['image']['type'];
+$fileName = $_FILES['file']['name'];
+$tmpName  = $_FILES['file']['tmp_name'];
+$fileSize = $_FILES['file']['size'];
+$fileType = $_FILES['file']['type'];
 
 $fp      = fopen($tmpName, 'r');
 $content = fread($fp, filesize($tmpName));
@@ -185,10 +184,6 @@ if(!get_magic_quotes_gpc())
 {
     $fileName = addslashes($fileName);
 }
-include 'library/config.php';
-include 'library/opendb.php';
-
-include 'library/closedb.php';
 
 echo "<br>File $fileName uploaded<br>";
 }  
@@ -205,11 +200,8 @@ if(isset($err)){ echo "$err </br>";}
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-  //$fileName=NULL;	
-  $file_Name=$_POST["image"];
 
-
-  $sql="INSERT INTO user VALUES('$name','$dob','$gender','$rn','$dept','$email','$delta','$spider','$rmi','$design','$ra','$school',PASSWORD('$pass'),'$file_Name','$content')";
+  $sql="INSERT INTO user VALUES('$name','$dob','$gender','$rn','$dept','$email','$delta','$spider','$rmi','$design','$ra','$school',PASSWORD('$pass'),'$fileName','$content','$fileType','$fileSize','$tmpName')";
 
   echo "</br>";
   
@@ -222,6 +214,7 @@ echo "Response Recorded";
 mysqli_close($db);}
 
     
+
 }  
 
 ?>
